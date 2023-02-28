@@ -37,4 +37,6 @@ Step 5: Start IR service
 <pre><code>
 $ sudo systemctl start lircd.service
 $ sudo systemctl start irexec.service
+$ sudo systemctl enable irexec.service
+$ sudo reboot
 </code></pre>
