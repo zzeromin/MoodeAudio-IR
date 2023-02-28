@@ -1,0 +1,117 @@
+begin
+prog = irexec
+button = KEY_1
+config = mpc repeat
+end
+
+begin
+prog = irexec
+button = KEY_2
+config = mpc random
+end
+
+begin
+prog = irexec
+button = KEY_3
+config = mpc single
+end
+
+begin
+prog = irexec
+button = KEY_4
+config = export DISPLAY=:0; xdotool key Alt+F4
+end
+
+begin
+prog = irexec
+button = KEY_5
+config = mpc stop; export DISPLAY=:0; xdotool key Ctrl+n; export DISPLAY=:0; xd$
+end
+
+begin
+prog = irexec
+button = KEY_7
+config = python3 /home/pi/RasMusicPi-rgb-led/clear.py
+end
+
+begin
+prog = irexec
+button = KEY_8
+config = systemctl restart rgbled.service
+end
+
+begin
+prog = irexec
+button = KEY_T
+config = systemctl restart oled
+end
+
+begin
+prog = irexec
+button = KEY_PREVIOUS
+config = mpc prev; mpc play
+repeat = 0
+end
+
+begin
+prog = irexec
+button = KEY_NEXT
+config = mpc next; mpc play
+repeat = 0
+end
+
+begin
+prog = irexec
+button = KEY_PLAY
+config = mpc toggle
+repeat = 0
+end
+
+begin
+prog = irexec
+button = KEY_MUTE
+config = mpc stop
+repeat = 0
+end
+
+begin
+prog = irexec
+button = KEY_VOLUMEUP
+config = mpc volume +2
+repeat = 4
+end
+
+begin
+prog = irexec
+button = KEY_VOLUMEDOWN
+config = mpc volume -2
+repeat = 4
+end
+
+begin
+prog = irexec
+button = KEY_CANCEL
+config = mpc seek +2%
+repeat = 4
+end
+
+begin
+prog = irexec
+button = KEY_0
+config = mpc seek -2%
+repeat = 4
+end
+
+begin
+prog = irexec
+button = KEY_MENU
+config = reboot
+repeat = 0
+end
+
+begin
+prog = irexec
+button = KEY_POWER
+config = halt
+repeat = 0
+end
